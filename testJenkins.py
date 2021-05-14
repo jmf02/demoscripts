@@ -2,9 +2,9 @@ import sys
 import urllib2
 import base64
 
-username = "admin"
-password = "abscde45"
-url = 'http://192.168.1.25:4516/deployit/server/state'
+username = releaseVariables['user']
+password = releaseVariables['password']
+url = releaseVariables['url']
 
 request = urllib2.Request(url)
 b64auth = base64.standard_b64encode("%s:%s" % (username,password))
@@ -17,4 +17,3 @@ print(status)
 
 if (status.find("RUNNING") == -1):
    sys.exit(1)
-

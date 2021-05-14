@@ -1,6 +1,6 @@
 #!/bin/sh
 
-recup=`ssh jmf@192.168.1.24   systemctl is-active jenkins`
+recup=`${urljenkins}`
 echo $recup
 if [ $recup = 'inactive' ]
 then
