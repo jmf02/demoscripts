@@ -1,9 +1,11 @@
 #!/bin/sh
 
 recup=`${urljenkins}`
-echo $recup
 if [ $recup = 'inactive' ]
 then
+ echo Jenkins $recup	
  exit 1
+else
+ echo Jenkins $recup 
 fi
 
